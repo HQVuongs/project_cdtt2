@@ -1,7 +1,6 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
-import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
@@ -43,10 +42,6 @@ function App() {
                 <List columns={userColumns}/>
               </ProtectedRoute>} />
 
-              <Route path=":userId" element={
-              <ProtectedRoute>
-                <Single />
-              </ProtectedRoute>} />
 
               <Route
                 path="new"
@@ -63,10 +58,6 @@ function App() {
                 </ProtectedRoute>
               } />
 
-              <Route path=":productId" element={
-              <ProtectedRoute>
-                <Single />
-              </ProtectedRoute>} />
               
               <Route
                 path="new"
@@ -84,10 +75,6 @@ function App() {
                 </ProtectedRoute>
               } />
 
-              <Route path=":productId" element={
-              <ProtectedRoute>
-                <Single />
-              </ProtectedRoute>} />
               
               <Route
                 path="new"
